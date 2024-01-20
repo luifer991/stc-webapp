@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bevan&family=Lato&family=Libre+Baskerville:wght@700&display=swap");
+
+:root {
+  font-family: 'Bevan', serif;
+  line-height: 1.4;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Light Mode Variables */
+
+  --bg: #ffffff;
+  --card-bg: #19284c0d;
+  --bg-btn: #19284c;
+  --border-btn: #19284c;
+  --text-colorbtn: #19284c;
+  --txt-btn: #ffffffcc;
+  --txt-color: #000000cc;
+  --txt-p-color: #00000099;
+  --navbar-color: #ffffff80;
+  --nav-txt: #000000d8;
+  --border-card: #74747420;
+  --hover-card: #19284c;
+  --shadows: rgba(0, 0, 0, 0.4);
+  --url: url('./src/assets/CaminandoWhite.png') 
+}
+[data-theme="dark"]{
+
+  /* Dark Mode Variables */
+  
+  --bg: #000000;
+  --card-bg: #cbb36a0d;
+  --bg-btn: #cbb26a;
+  --border-btn: #cbb26a;
+  --txt-btn: #2a2a2a;
+  --text-colorbtn: #d8c690;
+  --txt-color: #ffffffcc;
+  --txt-p-color: #ffffff99;
+  --navbar-color: #000000cc;
+  --nav-txt: #d8c690;
+  --border-card: #747474;
+  --hover-card : #d8c690;
+  --shadows: rgba(255, 255, 255, 0.4);
+  --url: url('./src/assets/pocketforce.jpeg');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  min-width: 0;
+  position: relative;
+}
+
+body{
+  min-height: 100dvh;
+}
+  h1 h2 h3 h4 h5 h6{
+    text-wrap: balance;
+  }
+  p{
+    text-wrap: pretty;
+  }
+
+
+.container{
+  background: var(--bg);
+  transition: 0.5s;
+  color: var(--txt-color);
+}

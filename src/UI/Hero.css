@@ -1,0 +1,115 @@
+.hero{
+    background-image: url('./src/assets/darkpocket.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh !important;
+    color: #ffffff !important;
+}
+
+
+.buttons{
+    padding-left: 40px;
+    padding-top: 0% !important;
+    margin-top: 0 !important;
+}
+
+.s-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Libre Baskerville', serif;
+    cursor: pointer;
+    border-color: #ffffff;
+
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1000ms;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #ffffff;
+}
+
+.s-btn:hover{
+    border-color: #cbb26a;
+    color: #000000;
+    scale: 1.2;
+    outline: 2px solid #d8c690;
+    box-shadow: 4px 5px 17px -4px #d8c690;
+}
+
+.s-btn::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #d8c690;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+.s-btn:hover::before {
+    width: 250%;
+  }
+
+.l-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    background-color: #d8c690;
+    color: #2a2a2a;
+    font-family: 'Libre Baskerville', serif;
+    cursor: pointer;
+    transition: all 1000ms;
+    border-color: #cbb26a0d;
+}
+
+.l-btn:hover{
+    background-color: #d8c690;
+    scale: 1.2;
+    box-shadow: 4px 5px 17px -4px #d8c690;
+}
+
+
+@media (min-width: 768px) and (max-width:991px) {
+    .hero{
+        background-image: url('./src/assets/pocketforce.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .buttons{
+        padding-left: 4rem;
+    }
+
+}
+
+/* Media for small devices */
+
+@media (min-width:481px) and (max-width:767px) {
+    .hero{
+        background-image: url('./src/assets/pocketforce.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+
+
+}
+
+/* Media for Phones */
+
+@media (max-width:480px){
+    .hero{
+        background-image: url('./src/assets/pocketforce.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+    .buttons{
+        padding-left: 1.2rem !important;
+    }
+}

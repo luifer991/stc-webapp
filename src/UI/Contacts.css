@@ -1,0 +1,24 @@
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+/* Media for Phones */
+
+@media (max-width:480px){
+    .card-container{
+        display: grid;
+        grid-template-columns: 
+          repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+          );
+        gap: 10px;
+        
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+}

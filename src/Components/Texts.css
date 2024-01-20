@@ -1,0 +1,11 @@
+.text-2{
+    font-size: 14px;
+    font-family: 'Libre Baskervile', serif;
+    color: var(--text-colorbtn);
+}
+
+.title-2{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 50px;
+}

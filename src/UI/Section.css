@@ -1,0 +1,385 @@
+article{
+    display: block;
+    width: 50%;
+    height: 100vh;
+    padding-left: 50px;
+    padding-top: 2rem;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+}
+
+article .text-2{
+  font-size: 20px;
+  font-family: 'Libre Baskervile', serif;
+  color: var(--text-colorbtn);
+}
+
+.title-2{
+  padding-bottom: 30px;
+  line-height: 1.1;
+  letter-spacing: -1%;
+  max-width: 600px;
+  padding-top: 30px;
+  font-size: 50px;
+  color: var(--txt-color);
+}
+
+.body-2{
+  padding-bottom: 80px;
+  max-width: 500px;
+  font-family: 'Libre Baskerville', serif;
+  color: var(--txt-p-color);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 
+      repeat(
+        auto-fit,
+        minmax(100px, 1fr)
+      );
+    gap: 20px;
+}
+
+.image{
+    width: 50%;
+    height: auto;
+    scale: 0.8;
+    border-radius: 10%;
+    padding-top: 3rem;
+
+    animation: reveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60%;
+}
+
+.grid-item{
+  display: block !important;
+  background-color: var(--card-bg);
+  cursor: pointer;
+  text-align: start;
+  padding: 30px;
+  max-width: 400px;
+  box-shadow: 2px 4px 10px 2px var(--shadows);
+  border-radius: 20px;
+  position: relative;
+  border: 5px solid var(--border-card);
+  transition: 0.5s ease-out;
+  overflow: visible;
+
+  animation: motion linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.grid-item:hover {
+  border: 5px solid var(--hover-card);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+
+ .grid-item:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+  cursor: pointer;
+ }
+ 
+
+.grid-item .icon{
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--hover-card);
+}
+
+.grid-item .subtitle{
+  font-size: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  color: var(--txt-color);
+}
+
+.grid-item .body{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  color: var(--txt-p-color);
+}
+
+section{
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--hover-card);
+  color: var(--txt-btn);
+  font-size: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+ a:has(.card-button){
+  transform: translate(-50%, 125%);
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+ }
+
+ .grid-item:hover a:has(.card-button) {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+  cursor: pointer;
+ }
+
+
+@keyframes motion{
+  from{
+    opacity: 0;
+    translate: 0 100px;
+  }
+  to{
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes reveal {
+  from{
+    opacity: 0;
+  }  
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+/* Media for Tablets */
+
+@media (min-width:768px) and (max-width:991px){
+  article{
+    display: block;
+    width: 50%;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+
+}
+
+  .text-2{
+    font-size: 14px;
+    font-family: 'Libre Baskervile', serif;
+    color: var(--text-colorbtn);
+  }
+
+  .title-2{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 25px;
+  }
+
+  .body-2{
+    padding-bottom: 30px;
+    font-size: 12px;
+  }
+
+  .grid{
+      display: grid;
+      grid-template-columns: 
+        repeat(
+          auto-fit,
+          minmax(100px, 1fr)
+        );
+      gap: 10px;
+  }
+
+  .image{
+      width: 50%;
+      height: auto;
+      scale: 0.9;
+  }
+
+  .grid-item{
+    display: block !important;
+    text-align: start;
+    padding: 10px;
+    color: var(--text-color);
+    max-width: 200px;
+    box-shadow: 2px 4px 10px 2px var(--shadows);
+  }
+
+  .grid-item .icon{
+    width: 30px;
+    height: auto;
+  }
+
+  .grid-item .subtitle{
+    font-size: 12px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .grid-item .body{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10px;
+  }
+
+  section{
+      display: flex;
+      padding-bottom: 80px;
+  }
+}
+
+/* Media for small devices */
+
+@media (min-width:481px) and (max-width:767px) {
+  article{
+    height: 100vh;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    width: 90%;
+}
+
+  .text-2{
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .title-2{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 40px;
+  }
+
+  .body-2{
+    padding-bottom: 5rem;
+    font-size: 14px;
+  }
+
+  .grid{
+      display: grid;
+      grid-template-columns: 
+        repeat(
+          auto-fit,
+          minmax(300px, 1fr)
+        );
+      gap: 10px;
+  }
+
+  .image{
+      width: 100%;
+      height: auto;
+      scale: 0.8;
+      padding-top: 5rem;
+  }
+
+  .grid-item{
+    padding: 1rem;
+    max-width: 400px;
+  }
+
+  .grid-item .icon{
+    width: 40px;
+    height: auto;
+  }
+
+  .grid-item .subtitle{
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .grid-item .body{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
+  }
+
+  section{
+      display: block;
+  } 
+
+}
+
+/* Media for Phones */
+
+@media (max-width:480px){
+  article{
+    height: 100vh;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    width: 90%;
+}
+
+  .text-2{
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .title-2{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 30px;
+  }
+
+  .body-2{
+    padding-bottom: 5rem;
+    font-size: 14px;
+  }
+
+  .grid{
+      display: grid;
+      grid-template-columns: 
+        repeat(
+          auto-fit,
+          minmax(200px, 1fr)
+        );
+      gap: 10px;
+  }
+
+  .image{
+      width: 100%;
+      height: auto;
+      scale: 0.8;
+      padding-top: 2rem;
+  }
+
+  .grid-item{
+    display: block !important;
+    text-align: start;
+    padding: 10px;
+    max-width: 400px;
+    box-shadow: 2px 4px 10px 2px var(--shadows);
+  }
+
+  .grid-item .icon{
+    width: 30px;
+    height: auto;
+  }
+
+  .grid-item .subtitle{
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .grid-item .body{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+  }
+
+  section{
+      display: block;
+  } 
+
+}

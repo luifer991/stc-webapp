@@ -1,0 +1,77 @@
+.cta{
+    display: block;
+    background-image: url('./src/assets/golpear.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    width: 100%;
+    height: 50%;
+    padding-bottom: 50px;
+}
+
+.title1{
+    padding-left: 50px;
+    line-height: 1.1;
+    letter-spacing: -1%;
+    padding-bottom: 80px;
+    max-width: 600px;
+    color: #ffffff99;
+}
+
+.title1 > h2{
+    justify-content: center;
+    text-align: start;
+    font-size: 50px;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    color: #cbb26acc;
+}
+
+.title1 > p {
+    font-family: 'Libre Baskerville' serif;
+    max-width: 400px;
+}
+
+.buttons2{
+    padding-left: 40px;
+    padding-top: 0% !important;
+    margin-top: 0 !important;
+}
+
+/* Media for small devices */
+
+@media (min-width:481px) and (max-width:767px) {
+    .cta{
+        display: block;
+        background-image: url('./src/assets/golpear.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 30%;
+    }
+    
+}
+
+/* Media for Phones */
+
+@media (max-width:480px){
+    .cta{
+        display: block;
+        background-image: url('./src/assets/golpear.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 20%;
+        width: 100%;
+        height: 50%;
+        padding-bottom: 3rem;
+    }
+    
+    .title1{
+        padding-left: 3rem;
+        padding-bottom: 3rem;
+        color: #ffffff;
+    }
+    .buttons{
+        padding-left: 3rem;
+        font-size: 14px;
+    }
+}

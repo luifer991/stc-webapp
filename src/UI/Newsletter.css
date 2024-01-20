@@ -1,0 +1,189 @@
+.newsletter{
+    display: block;
+    justify-items: center;
+    align-content: center;
+    text-align: start;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    background-image: url('./src/assets/jiuJitsu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    transform: scale(0.9);
+    margin: 50px 0px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    color: white;
+  }
+
+.form .label {
+    font-size: 15px;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    right: 430px;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+
+.input {
+    width: 400px;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px 0 0 6px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Libre Baskerville', serif;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+
+.input:focus {
+    border: 2px solid transparent;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+
+.form .input:valid ~ .label,
+.form .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.form .input:valid,
+.form .input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.title-3{
+    max-width: 600px;
+    line-height: 1.1;
+    letter-spacing: -1%;
+}
+
+.title-3 > h2{
+    justify-content: center;
+    text-align: start;
+    font-size: 50px;
+    padding-bottom: 30px;
+    color: #cbb26acc;
+}
+
+.title-3 > p{
+    padding-bottom: 80px;
+    font-family: 'Libre Baskerville' serif;
+    color: #ffffff99;
+    max-width: 500px;
+}
+
+
+
+.form .send-btn{
+    padding: 14px 30px;
+    background-color: #d8c690;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    font-family: 'Libre Baskerville' serif;
+}
+
+ .newsletter > p{
+    padding: 20px 0;
+    font-family: 'Libre Baskerville' serif;
+    font-size: small;
+    color: #ffffff99;
+ }
+
+ /* Media for small devices */
+
+@media (min-width:481px) and (max-width:767px) {
+    .newsletter{
+        background-image: url('./src/assets/jiuJitsu.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #email{
+        width: 90%;
+        height: 50px;
+    }
+    
+    .send-btn{
+        width: 90%;
+        background-color: #d8c690;
+        margin-top: 1rem;
+    }
+}
+
+/* Media for Phones */
+
+@media (max-width:480px){
+    .newsletter{
+        background-image: url('./src/assets/jiuJitsu.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .title-3 > h2{
+        padding-bottom: 2rem;
+    }
+    
+    .title-3 > p{
+        padding-bottom: 2rem;
+    }
+    
+    #email{
+        width: 90%;
+        height: 50px;
+    }
+
+    .form .label {
+        font-size: 15px;
+        padding-left: 10px;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+    
+    .input{
+        width: 90%;
+    }
+
+
+    .send-btn{
+        width: 90%;
+        background-color: #d8c690;
+        margin-top: 1rem;
+        cursor: pointer !important;
+    }
+
+    .send-btn:hover{
+        cursor: pointer !important;
+    }
+    
+     .newsletter > p{
+        padding: 10px 0;
+        font-family: 'Libre Baskerville' serif;
+        font-size: small;
+        color: #fff;
+     }
+}
